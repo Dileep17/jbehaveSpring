@@ -6,6 +6,10 @@
 
     <bean id="Context" class="learning.models.Context"/>
 
+    <bean class="learning.steps.Hooks">
+        <property name="context" ref="Context" />
+    </bean>
+
     <bean class="learning.steps.MyStepsOne">
         <property name="context" ref="Context" />
     </bean>
