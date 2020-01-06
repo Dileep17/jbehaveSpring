@@ -4,12 +4,14 @@
   xsi:schemaLocation="http://www.springframework.org/schema/beans
            http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
 
-  <bean id="Pojo" class="learning.models.Pojo" />
+    <bean id="Pojo" class="learning.models.Pojo"/>
 
-    <bean class="learning.steps.MySteps">
-      <property name="pojo">
-        <ref bean="Pojo"/>
-      </property>
+    <bean class="learning.steps.MyStepsOne">
+      <property name="pojo" ref="Pojo" />
+    </bean>
+
+    <bean class="learning.steps.MyStepsTwo">
+    <property name="pojo" ref="Pojo" />
     </bean>
 
 </beans>

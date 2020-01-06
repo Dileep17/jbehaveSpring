@@ -13,8 +13,9 @@ public class Pojo {
 
     public Pojo(){
         System.out.println("In Pojo construction this = " + this);
+        context = new ThreadLocal<Integer>();
     }
 
-    private ThreadLocal<Integer> context = new ThreadLocal<Integer>();;
+    private ThreadLocal<Integer> context;
 
 }
