@@ -4,14 +4,22 @@
   xsi:schemaLocation="http://www.springframework.org/schema/beans
            http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
 
-    <bean id="Pojo" class="learning.models.Pojo"/>
+    <bean id="Context" class="learning.models.Context"/>
 
     <bean class="learning.steps.MyStepsOne">
-      <property name="pojo" ref="Pojo" />
+        <property name="context" ref="Context" />
     </bean>
 
     <bean class="learning.steps.MyStepsTwo">
-    <property name="pojo" ref="Pojo" />
+        <property name="context" ref="Context" />
+    </bean>
+
+    <bean class="learning.steps.GmailStepDefs">
+        <property name="context" ref="Context" />
+    </bean>
+
+    <bean class="learning.steps.AutomationPracticeStepDefs">
+        <property name="context" ref="Context" />
     </bean>
 
 </beans>

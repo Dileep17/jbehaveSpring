@@ -44,7 +44,8 @@ public class MyStories extends JUnitStories {
     
     public MyStories() {
         configuredEmbedder().embedderControls().doGenerateViewAfterStories(true).doIgnoreFailureInStories(true)
-                .doIgnoreFailureInView(true).useThreads(2).useStoryTimeoutInSecs(60);
+                .doIgnoreFailureInView(true);
+        //.useThreads(2).useStoryTimeoutInSecs(60);
 
     }
 
@@ -79,6 +80,7 @@ public class MyStories extends JUnitStories {
         String path = "learning".replaceAll("\\.", "/");
         context = new SpringApplicationContextFactory(path+"/my_steps.xml").createApplicationContext();
         return new SpringStepsFactory(configuration(), context);
+
     }
 
 
