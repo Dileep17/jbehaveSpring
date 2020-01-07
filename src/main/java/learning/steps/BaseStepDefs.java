@@ -1,14 +1,9 @@
 package learning.steps;
 
 import learning.models.Context;
-import org.jbehave.core.annotations.AfterStories;
-import org.jbehave.core.annotations.AfterStory;
+import org.springframework.beans.factory.annotation.Autowired;
 
 public class BaseStepDefs {
+    @Autowired
     Context context;
-
-    public void setContext(Context context){
-        this.context = context;
-    }
-
 }

@@ -1,15 +1,12 @@
 package learning.models;
 
-import org.jbehave.core.annotations.Then;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-
-
+import org.springframework.stereotype.Component;
 import java.io.File;
-import java.net.URISyntaxException;
-import java.net.URL;
 
 
+@Component
 public class Context {
 
     private static ThreadLocal<Integer> context = new ThreadLocal<Integer>();;
@@ -31,7 +28,6 @@ public class Context {
         String path = "src/main/resources/learning/chromedriver";
         File file = new File(path);
         String absolutePath = file.getAbsolutePath();
-//         "/Users/dileepbellamkonda/Documents/Learning/automationPracCucumber/chromedriver"
         System.setProperty("webdriver.chrome.driver", absolutePath);
         this.driver.set(new ChromeDriver());
     }
