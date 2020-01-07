@@ -20,7 +20,7 @@
 <!--  xsi:schemaLocation="http://www.springframework.org/schema/beans-->
 <!--           http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">-->
 
-<!--    <bean id="Context" class="learning.models.Context"/>-->
+<!--    <bean id="Context" class="learning.TestContext.Context"/>-->
 
 <!--    <bean class="learning.steps.Hooks">-->
 <!--        <property name="context" ref="Context" />-->
